@@ -1,3 +1,10 @@
+<script type="text/javascript">
+    function goto_modify_page_by_id(id) {
+        let form = document.getElementById('form_list');
+        form.action = "CompanyController.php?type=edit&company_id="+id;
+        form.submit(); // Form submission
+    }
+</script>
 <?php
 	
 if($form_state == "create_company"){
@@ -28,7 +35,7 @@ if($form_state == "create_company"){
         border: 1px solid black;
     }
 </style>
-	<form action="CompanyController.php">
+	<form action="CompanyController.php" name="form_list" id="form_list" method="post">
 		<h1>List Company</h1>
 		<input type="hidden" name="form_state" value="list_company">
 		<table>
@@ -44,7 +51,8 @@ if($form_state == "create_company"){
                     <td><?php echo $company["name"] ?></td>
                     <td><?php echo $company["address"] ?></td>
                     <td><?php echo $company["license_no"]?></td>
-                    <td>MODIFY</td>
+                    <td><a href="#" onclick="goto_modify_page_by_id(<?php echo $company["id"] ?>)">Edit</a></td>
+                    <input type="hidden" name="company_id" value="<?php echo $company["id"] ?>">
                 </tr>  
             <?php } ?>
             </tbody>
