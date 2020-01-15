@@ -1,7 +1,18 @@
 <script type="text/javascript">
-    function goto_modify_page_by_id(id) {
-        let form = document.getElementById('form_list');
-        form.action = "CompanyController.php?type=edit&company_id="+id;
+    function goto_modify_page_by_id(id, type, formId) {
+        let form = document.getElementById(formId);
+        console.log(form);
+        switch (type) {
+            case 1:
+                form.action = "CompanyController.php?type=edit&company_id="+id;
+            break;
+            case 2:
+                form.action = "EmployeeController.php?type=edit&employee_id="+id;
+            break;
+            case 3:
+                form.action = "EmployeeController.php?type=create";
+            break
+        }
         form.submit(); // Form submission
     }
 </script>
@@ -35,7 +46,7 @@ if($form_state == "create_company"){
         border: 1px solid black;
     }
 </style>
-	<form action="CompanyController.php" name="form_list" id="form_list" method="post">
+	<form action="CompanyController.php" name="form_list_company" id="form_list_company" method="post">
 		<h1>List Company</h1>
 		<input type="hidden" name="form_state" value="list_company">
 		<table>
@@ -51,7 +62,7 @@ if($form_state == "create_company"){
                     <td><?php echo $company["name"] ?></td>
                     <td><?php echo $company["address"] ?></td>
                     <td><?php echo $company["license_no"]?></td>
-                    <td><a href="#" onclick="goto_modify_page_by_id(<?php echo $company["id"] ?>)">Edit</a></td>
+                    <td><a href="#" onclick="goto_modify_page_by_id(<?php echo $company["id"] ?>, 1, 'form_list_company')">Edit</a></td>
                     <input type="hidden" name="company_id" value="<?php echo $company["id"] ?>">
                 </tr>  
             <?php } ?>
@@ -59,9 +70,10 @@ if($form_state == "create_company"){
 		</table>
 	</form>
 <?php } elseif ($form_state == "edit_company"){?>
-	<form action="CompanyController.php" method="post">
+	<form action="CompanyController.php" name="form_list_employee" id="form_list_employee" method="post">
 		<input type="hidden" name="form_state" value="edit_company">
-		<h1>Create company</h1>
+		<input type="hidden" name="company_id" value="<?php echo $company_id ?>">
+        <h1>Edit company</h1>
 		<table>
 			<tbody>
 				<tr>
@@ -76,7 +88,35 @@ if($form_state == "create_company"){
 				</tr>
 			</tbody>
 		</table>
-			<button type="submit" name="btn_register" value="register">Register</button>
-			<button type="submit" name="btn_create_employee" value="create">Create employee</button>
+        <div>
+            <button type="submit" name="btn_register" value="register">Register</button>
+            <button type="button" onclick="goto_modify_page_by_id(null, 3, 'form_list_employee')" name="btn_create_employee" value="create">Create employee</button>
+        </div>
+        <div>
+            <h3><u>List employee</u></h3>
+            <?php if (count($employees) == 0) {?>
+                <p>The company does not has any employees.</p>
+            <?php }else{ ?>
+                <table>
+                    <thead>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Telephone</th>
+                        <th>Modify</th>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($employees as $employee){ ?>
+                        <tr>
+                            <td><?php $employee["name"] ?></td>
+                            <td><?php $employee["surname"] ?></td>
+                            <td><?php $employee["telephone"] ?></td>
+                            <td><?php $employee["telephone"] ?></td>
+                            <td><a href="#" onclick="goto_modify_page_by_id(<?php echo $employee["id"] ?>, 2, 'form_list_employee')">Edit</a></td>
+                        </tr>
+                    <?php }?>
+                    </tbody>
+                </table>
+            <?php } ?>
+        </div>
 	</form>
 <?php }?>

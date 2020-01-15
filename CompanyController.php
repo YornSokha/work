@@ -84,6 +84,13 @@ if(!isset($_POST["form_state"]) || $_POST["form_state"] == null){
 		$_POST["company_name"] = $company['name'];
 		$_POST["company_address"] = $company['address'];
 		$_POST["company_license"] = $company['license_no'];
+		
+		$sql = "select e.id, e.name, e.surname, e.telephone, e.salary from employees e order by e.name";
+		$result = pg_query($db_connection, $sql);
+		$employees = [];
+		while ($employee = pg_fetch_assoc($result)){
+			$employees[] = $employee;
+		}
 		include("views/company.php");
 	}
 }elseif($_GET["type"] == "edit"){

@@ -1,5 +1,5 @@
 <?php
-if($form_state == "create_company"){
+if($form_state == "create_employee"){
 	?>
 <form action="EmployeeController.php" method="post">
 	<input type="hidden" name="form_state" value="create_employee">

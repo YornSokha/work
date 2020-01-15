@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d72d8f79-42e8-4632-b077-dcfb73ff5112" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/CompanyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/EmployeeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/company.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/company.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,8 @@
       <workItem from="1578879872823" duration="491000" />
       <workItem from="1578903741778" duration="752000" />
       <workItem from="1578966518132" duration="15386000" />
-      <workItem from="1578982598445" duration="896000" />
+      <workItem from="1578982598445" duration="958000" />
+      <workItem from="1579052973195" duration="2725000" />
     </task>
     <task id="LOCAL-00001" summary="add read me">
       <created>1578981956884</created>
