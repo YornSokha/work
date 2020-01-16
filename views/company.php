@@ -73,6 +73,7 @@ if($form_state == "create_company"){
 	<form action="CompanyController.php" name="form_list_employee" id="form_list_employee" method="post">
 		<input type="hidden" name="form_state" value="edit_company">
 		<input type="hidden" name="company_id" value="<?php echo $company_id ?>">
+        <button type="submit" name="btn_quit" value="quit">Quit</button>
         <h1>Edit company</h1>
 		<table>
 			<tbody>
@@ -102,7 +103,6 @@ if($form_state == "create_company"){
                         <th>Name</th>
                         <th>Surname</th>
                         <th>Telephone</th>
-                        <th>Modify</th>
                     </thead>
                     <tbody>
                     <?php foreach ($employees as $employee){ ?>
@@ -111,7 +111,6 @@ if($form_state == "create_company"){
                             <td><?php echo $employee["surname"] ?></td>
                             <td><?php echo $employee["telephone"] ?></td>
                             <td><?php echo $employee["telephone"] ?></td>
-                            <td><a href="#" onclick="goto_modify_page_by_id(<?php echo $employee["id"] ?>, 2, 'form_list_employee')">Edit</a></td>
                         </tr>
                     <?php }?>
                     </tbody>

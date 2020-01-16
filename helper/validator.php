@@ -1,6 +1,6 @@
 <?php
 
-function validateInput($name, $value, $required = false, $maxLength = null, $minLength = null, $positive = false){
+function validateInput($name, $value, $required = false, $maxLength = null, $minLength = null, $numeric = false, $positive = false){
 	$error = "";
 	if ($required){
 		if (!isset($value) || $value == "")
@@ -16,9 +16,14 @@ function validateInput($name, $value, $required = false, $maxLength = null, $min
 			$error .= " min length ". $minLength;
 		}
 	}
-	if (is_numeric($value) && $positive){
-		if($value < 0){
-			$error .= " must be a positive number";
+	if ($numeric){
+		if (!is_numeric($value)){
+			$error .= " must be numeric value";
+		}
+		if ($positive){
+			if($value < 0){
+				$error .= " must be a positive number";
+			}	
 		}
 	}
 	if($error != ""){

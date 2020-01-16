@@ -5,9 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/CompanyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/EmployeeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/helper/validator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/company.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/company.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/information.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/information.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +76,7 @@
       <workItem from="1578903741778" duration="752000" />
       <workItem from="1578966518132" duration="15386000" />
       <workItem from="1578982598445" duration="958000" />
+      <workItem from="1579052973195" duration="3047000" />
       <workItem from="1579052973195" duration="2725000" />
       <workItem from="1579104939716" duration="6292000" />
     </task>
