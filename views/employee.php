@@ -43,6 +43,7 @@ if($form_state == "create_employee"){
     <form action="EmployeeController.php" name="form_edit" id="form_edit" method="post">
         <input type="hidden" name="form_state" value="edit_employee">
         <input type="hidden" name="company_id" value="<?php echo $company_id ?>">
+        <input type="hidden" name="id" value="<?php echo $id ?>">
         <h1>Edit employee's profile</h1>
         <table>
             <tbody>

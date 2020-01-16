@@ -5,9 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/CompanyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/EmployeeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/helper/validator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/company.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/company.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/information.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/information.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
