@@ -16,6 +16,11 @@
         form.submit(); // Form submission
     }
 </script>
+<style>
+    table, tr, td{
+        border: 1px solid black;
+    }
+</style>
 <?php
 	
 if($form_state == "create_company"){
@@ -41,11 +46,6 @@ if($form_state == "create_company"){
 	</form>
 <?php
 } elseif ($form_state == "list_company"){?>
-    <style>
-    table, tr, td{
-        border: 1px solid black;
-    }
-</style>
 	<form action="CompanyController.php" name="form_list_company" id="form_list_company" method="post">
 		<h1>List Company</h1>
 		<input type="hidden" name="form_state" value="list_company">
@@ -107,10 +107,10 @@ if($form_state == "create_company"){
                     <tbody>
                     <?php foreach ($employees as $employee){ ?>
                         <tr>
-                            <td><?php $employee["name"] ?></td>
-                            <td><?php $employee["surname"] ?></td>
-                            <td><?php $employee["telephone"] ?></td>
-                            <td><?php $employee["telephone"] ?></td>
+                            <td><?php echo $employee["name"] ?></td>
+                            <td><?php echo $employee["surname"] ?></td>
+                            <td><?php echo $employee["telephone"] ?></td>
+                            <td><?php echo $employee["telephone"] ?></td>
                             <td><a href="#" onclick="goto_modify_page_by_id(<?php echo $employee["id"] ?>, 2, 'form_list_employee')">Edit</a></td>
                         </tr>
                     <?php }?>
